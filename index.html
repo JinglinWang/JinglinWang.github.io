@@ -1,79 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Personal website for Jinglin Wang."
-    >
-    <title>Jinglin Wang</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="logo" href="/" aria-label="Jinglin Wang home">JW</a>
-      <nav aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Jinglin Wang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      font-family: Calibri, Arial, sans-serif;
+      background-color: #fdfdfd;
+      color: #111;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
 
-    <main>
-      <section class="hero" aria-labelledby="intro-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Personal website</p>
-          <h1 id="intro-title">Jinglin Wang</h1>
-          <p class="lede">
-            Welcome. This is a simple home for my work, projects, and ways to
-            get in touch.
-          </p>
-          <a class="primary-link" href="#contact">Contact me</a>
-        </div>
-        <div class="portrait-mark" aria-hidden="true">
-          <span>JW</span>
-        </div>
-      </section>
+    body {
+      font-size: 16px; /* default text size */
+      max-width: 1000px;
+      margin: 4em auto;
+      padding: 0 1em;
+    }
 
-      <section id="about" class="content-section">
-        <h2>About</h2>
-        <p>
-          Add a short bio here: who you are, what you work on, and what you want
-          visitors to remember.
-        </p>
-      </section>
+    h1 {
+      font-size: 36px;
+      font-weight: normal;
+      margin-top: 1.5em;
+      color: #222;
+    }
 
-      <section id="projects" class="content-section">
-        <h2>Projects</h2>
-        <div class="project-list">
-          <article>
-            <h3>Project One</h3>
-            <p>Briefly describe a project, paper, app, or portfolio item.</p>
-          </article>
-          <article>
-            <h3>Project Two</h3>
-            <p>Briefly describe another example of your work.</p>
-          </article>
-        </div>
-      </section>
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 1.5em;
+      color: #222;
+      margin-bottom: 0.2em;
+    }
 
-      <section id="contact" class="content-section">
-        <h2>Contact</h2>
-        <p>
-          Replace these links with your preferred email, GitHub, LinkedIn, or
-          other profiles.
-        </p>
-        <div class="contact-links">
-          <a href="mailto:hello@example.com">Email</a>
-          <a href="https://github.com/JinglinWang">GitHub</a>
-          <a href="https://www.linkedin.com/">LinkedIn</a>
-        </div>
-      </section>
-    </main>
+    a {
+      color: #0645AD;
+      text-decoration: none;
+    }
 
-    <footer>
-      <p>&copy; 2026 Jinglin Wang</p>
-    </footer>
-  </body>
+
+    ul {
+      margin-top: 0;        /* removes space above the list */
+      padding-left: 0;      /* removes indentation */
+      list-style-position: inside;  /* optional: moves bullets inside */
+    }
+
+    footer {
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #666;
+      text-align: center;
+    }
+
+    .abstract-toggle {
+  color: #0645AD;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+}
+
+    .abstract-text {
+      display: none;
+      margin-top: 0.5em;
+    }
+  </style>
+  
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://JinglinWang.github.io/",
+  "name": "Jinglin Wang"
+}
+</script>
+  
+  
+</head>
+<body>
+<section id="about" style="display: flex; align-items: center; gap: 3em;">
+  <div>
+    <img src="headshot.jpg" alt="Jinglin Wang headshot" style="width: 300px; border-radius: 50%; margin-top: 3em;">
+  </div>
+  <div style="flex: 1;">
+    <h1>Jinglin Wang</h1>
+    <p>
+      I am a PhD student in Economics at New York University.
+    </p>
+
+    <p>
+      My research interests lie at the intersection of industrial organization
+      and health economics. My job market paper studies how the expansion of
+      public health insurance affects private health insurance competition.
+    </p>
+
+    <p>
+      I am on the 2026-2027 job market.
+    </p>
+    
+    <p>
+      Email: <span style="color: #0645AD;">jinglin.wang@nyu.edu</span>
+    </p>
+    
+    <p><strong>
+      <a href="JinglinWang_CV.pdf" target="_blank">CV</a> · 
+      <a href="https://scholar.google.com/citations?hl=en&user=0NmO5-wAAAAJ&view_op=list_works&gmla=ACrTK9Wpx3tOe3bcXsL4R6k3RvH7dP93_xe7pVwj3UvStAbibl3FIY4n3TbNFfXr9eRQS41nbUcmSSF5mEyWY58t" target="_blank">Google Scholar</a>
+      </strong>
+    </p>
+  </div>
+</section>
+
+  <div style="margin-top: 2.5em;"></div> <!-- adds blank space -->
+
+<section id="job-market-paper">
+  <h2>Job Market Paper</h2>
+  <p style="margin-bottom: 0;">
+    Public Provision and Private Competition in Health Insurance
+  </p>
+</section>
+
+<section id="papers">
+  <h2 style="margin-bottom: 0;">Publication</h2>
+  <p style="margin-bottom: 0;">
+    <a href="https://www.aeaweb.org/articles?id=10.1257/aeri.20210515" target="_blank">
+      The Impact of Financial Assistance Programs on Health Care Utilization
+    </a>
+    (with Alyce Adams, Ray Kluender, Neale Mahoney, Francis Wong, and Wes Yin).
+    <em>American Economic Review: Insights</em>. September 2022.
+  </p>
+
+  <ul>
+    <li>
+      Coverage:
+      <a href="https://news.stanford.edu/?p=41373" target="_blank">Stanford News</a>
+    </li>
+  </ul>
+</section>
+
+
+
+<section id="work-in-progress">
+  <h2>Work in Progress</h2>
+  <p style="margin-bottom: 0;">
+    Estimating Weights Using Generative Adversarial Networks (with Elena Manresa)
+  </p>
+</section>
+
+  <footer>
+    &copy; 2026 Jinglin Wang
+  </footer>
+
+
+<!-- For the abstract button -->
+<script>
+  function toggleAbstract(button) {
+    // Get the <ul> element that contains this button
+    const ul = button.closest("ul");
+    if (!ul) return;
+
+    // Look for the next .abstract-text div after <ul>
+    let next = ul.nextElementSibling;
+    while (next && !next.classList.contains("abstract-text")) {
+      next = next.nextElementSibling;
+    }
+
+    if (next) {
+      const isVisible = next.style.display === "block";
+      next.style.display = isVisible ? "none" : "block";
+      button.textContent = isVisible ? "Abstract" : "Hide Abstract";
+    }
+  }
+</script>
+</body>
 </html>
