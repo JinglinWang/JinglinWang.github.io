@@ -55,17 +55,49 @@
       text-align: center;
     }
 
+    .abstract {
+      margin-top: 0.5em;
+    }
+
     .abstract-toggle {
-  color: #0645AD;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-}
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      color: #0645AD;
+      cursor: pointer;
+      list-style: none;
+      font: inherit;
+    }
+
+    .abstract-toggle::-webkit-details-marker {
+      display: none;
+    }
+
+    .abstract-toggle::before {
+      content: "";
+      flex: none;
+      width: 0;
+      height: 0;
+      border-top: 0.3em solid transparent;
+      border-bottom: 0.3em solid transparent;
+      border-left: 0.45em solid currentColor;
+    }
+
+    .abstract[open] > .abstract-toggle::before {
+      transform: rotate(90deg);
+    }
+
+    .abstract-toggle:focus-visible {
+      outline: 2px solid #0645AD;
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
 
     .abstract-text {
-      display: none;
+      margin: 0.5em 0 0;
+    }
+
+    .abstract + ul {
       margin-top: 0.5em;
     }
   </style>
@@ -124,6 +156,25 @@
       Public Provision and Private Competition in Health Insurance
     </a>
   </p>
+  <details class="abstract">
+    <summary class="abstract-toggle">Abstract</summary>
+    <p class="abstract-text">
+    Many social programs provide public benefits that can reduce demand for private options.
+    Expanding eligibility for these programs can create a trade-off between broadening access to
+    public benefits and preserving the demand that sustains private competition and consumer choice.
+    I study this trade-off in the U.S. health insurance market. Using administrative enrollment and
+    claims data from Colorado, I develop and estimate a structural model of insurance demand,
+    pricing, and insurer participation to evaluate an expansion of Medicaid eligibility from 138 to
+    200 percent of the federal poverty level. I find the expansion removes relatively low-cost
+    enrollees from the private market. Adverse selection is limited, however, because premium
+    subsidies largely offset higher gross premiums. The policy does reduce private demand, lowering
+    insurer participation and leaving remaining consumers with fewer coverage options. Welfare
+    losses among these consumers are concentrated in smaller markets, where expansion leads to a
+    greater decline in the probability of having multiple insurers. These findings highlight the
+    role of insurer participation in shaping the welfare effects of public coverage expansions and
+    inform recent proposals to extend Medicaid eligibility.
+    </p>
+  </details>
 </section>
 
 <section id="papers">
@@ -142,6 +193,21 @@
       <a href="https://news.stanford.edu/?p=41373" target="_blank">Stanford News</a>
     </li>
   </ul>
+
+  <details class="abstract">
+    <summary class="abstract-toggle">Abstract</summary>
+    <p class="abstract-text">
+    Most hospitals have financial assistance programs for low-income patients. We use administrative
+    data from Kaiser Permanente to study the effects of financial assistance on health care utilization.
+    Using a regression discontinuity design based on an income threshold for program eligibility,
+    we find that financial assistance increases the likelihood of inpatient, ambulatory, and emergency
+    department encounters by 3.6 pp (59 percent), 13.4 pp (20 percent), and 6.7 pp (53 percent),
+    respectively, though effects dissipate three quarters after program receipt. Financial assistance
+    also increases the detection and management of treatment-sensitive conditions (e.g., drugs treating
+    diabetes), suggesting that financial assistance may increase receipt of high-value care.
+    </p>
+  </details>
+
 </section>
 
 
@@ -151,6 +217,28 @@
   <p style="margin-bottom: 0;">
     Optimal Weights for Causal Inference with Data Combination (with Aziza Kurbonova and <a href="https://elenamanresa.github.io/" target="_blank" rel="noopener noreferrer">Elena Manresa</a>)
   </p>
+  <details class="abstract">
+    <summary class="abstract-toggle">Abstract</summary>
+    <p class="abstract-text">
+    Economics research increasingly combines multiple data sources, such as administrative records,
+    surveys, and field experiments, to improve identification of policy-relevant parameters.
+    However, these datasets are often not directly comparable: samples may differ in population
+    coverage, and outcomes may be missing or selected in systematically different ways. We develop a
+    general, data-driven weighting framework that aligns datasets by minimizing the distance between
+    potentially high-dimensional distributions. Our approach leverages optimal transport with
+    debiased Sinkhorn divergence and flexible, nonparametric weight functions, allowing the data to
+    determine which features are most relevant for alignment. The method is computationally scalable
+    and designed for broad applicability in applied work. Monte Carlo simulations show that our
+    method performs well in high-dimensional settings and in the presence of limited overlap,
+    offering a flexible alternative to existing parametric and moment-based reweighting approaches.
+    We demonstrate the performance of our approach in three common empirical settings. First, the
+    resulting weights correct for selection induced by attrition in randomized controlled trials.
+    Second, they improve efficiency when combining micro-level data with macro-level moments.
+    Finally, our main empirical application combines experimental and observational data to estimate
+    long-run treatment effects; we show that our method corrects bias from attributing
+    treatment-effect heterogeneity to differential selection into treatment.
+    </p>
+  </details>
 </section>
 
   <footer>
@@ -158,25 +246,5 @@
   </footer>
 
 
-<!-- For the abstract button -->
-<script>
-  function toggleAbstract(button) {
-    // Get the <ul> element that contains this button
-    const ul = button.closest("ul");
-    if (!ul) return;
-
-    // Look for the next .abstract-text div after <ul>
-    let next = ul.nextElementSibling;
-    while (next && !next.classList.contains("abstract-text")) {
-      next = next.nextElementSibling;
-    }
-
-    if (next) {
-      const isVisible = next.style.display === "block";
-      next.style.display = isVisible ? "none" : "block";
-      button.textContent = isVisible ? "Abstract" : "Hide Abstract";
-    }
-  }
-</script>
 </body>
 </html>
